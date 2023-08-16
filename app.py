@@ -4,6 +4,8 @@ import requests
 from bs4 import BeautifulSoup as bs
 from urllib.request import urlopen as uReq
 import logging
+from pymongo import MongoClient
+
 logging.basicConfig(filename="scrapper.log" , level=logging.INFO)
 
 app = Flask(__name__)
@@ -72,6 +74,16 @@ def index():
                           "Comment": custComment}
                 reviews.append(mydict)
             logging.info("log my final result {}".format(reviews))
+            connection_string = "mongodb+srv://harshkumar:harshkumar@cluster0.zdl9eld.mongodb.net/?retryWrites=true&w=majority"
+            connectionclient = MongoClient(connection_string)
+
+            db = connectionclient['review_scrap']
+            review_col = db['review_scrap_data']
+
+# Assuming 'reviews' contains the data you want to insert
+            review_col.insert_many(reviews)
+
+
             return render_template('result.html', reviews=reviews[0:(len(reviews)-1)])
         except Exception as e:
             logging.info(e)
@@ -83,4 +95,5 @@ def index():
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0")
+    app.run(host='0.0.0.0', port=5002)
+
