@@ -5396,3 +5396,168 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:8080
  * Running on http://172.18.0.14:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://172.18.0.14:5002
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 15, in homepage
+    return render_template("index.html")
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/config/workspace/review-scrapper-aws-main/templates/index.html", line 11, in template
+    {% comment %} <p>Product, Customer Name, Rating, Heading, Comment
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'comment'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:22:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 15, in homepage
+    return render_template("index.html")
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/config/workspace/review-scrapper-aws-main/templates/index.html", line 11, in template
+    {% comment %} <p>Product, Customer Name, Rating, Heading, Comment
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'comment'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:22:27] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:23:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:23:56] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:23:57] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:24:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:24:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:24:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:24:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:24:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:24:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:19] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:19] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:58] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:25:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:06] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:07] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:07] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:07] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:21] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:28] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:29] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:53] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:26:54] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:08] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:09] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:22] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:32] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:32] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:33] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:52] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:52] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:27:52] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:30:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:30:52] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:30:52] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:30:58] "GET /review HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:30:58] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:30:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:root:name
+INFO:root:rating
+INFO:root:No Comment Heading
+INFO:root:'NoneType' object has no attribute 'div'
+INFO:root:log my final result [{'Product': 'iPhone14', 'Name': 'Avi Nash', 'Rating': '5', 'CommentHead': 'Just wow!', 'Comment': 'Good'}, {'Product': 'iPhone14', 'Name': 'Tara singh mehra', 'Rating': '5', 'CommentHead': 'Great product', 'Comment': 'Nice camera but battery drain fast specially on video recording'}, {'Product': 'iPhone14', 'Name': 'Ajay Kumar', 'Rating': '5', 'CommentHead': 'Brilliant', 'Comment': 'Just amazing!'}, {'Product': 'iPhone14', 'Name': 'Narendar Redyy', 'Rating': '4', 'CommentHead': 'Very Good', 'Comment': 'Nice UI and Fast'}, {'Product': 'iPhone14', 'Name': 'Ashwini  biswal ', 'Rating': '4', 'CommentHead': 'Good quality product', 'Comment': 'Awesome 👍'}, {'Product': 'iPhone14', 'Name': 'Rahul Prasad ', 'Rating': '5', 'CommentHead': 'Fabulous!', 'Comment': 'Best smart phone under this price range compare to other phones in 2023 if you see overall build quality, performance and Camera with autofocus and video action mode are awesome50% extra RAM compared to iPhone 13 and other more features. Best time to upgrade to iPhone 14 . I am so happy See Low light photos are amazing..'}, {'Product': 'iPhone14', 'Name': 'SUNNY KUMAR', 'Rating': '5', 'CommentHead': 'Just wow!', 'Comment': 'I used iPhone 12 mini and now upgraded with iPhone 14. Camera quality is awesome.Full day battery backup.Super Retina display with high dynamic range is awesome.In terms of camera and battery life is big upgrade for me.'}, {'Product': 'iPhone14', 'Name': 'Shivam  kumar', 'Rating': '5', 'CommentHead': 'Terrific purchase', 'Comment': 'Thanku filipkart best phone in the world ❤️'}, {'Product': 'iPhone14', 'Name': 'Anup Singh', 'Rating': '5', 'CommentHead': 'Wonderful', 'Comment': 'Amazing product, love the design and the feel is awesome Performance is very smooth.'}, {'Product': 'iPhone14', 'Name': 'Vaish Khan', 'Rating': '5', 'CommentHead': 'Highly recommended', 'Comment': 'Ultimate'}, {'Product': 'iPhone14', 'Name': 'Vaish Khan', 'Rating': 'No Rating', 'CommentHead': 'No Comment Heading', 'Comment': 'Ultimate'}]
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:31:07] "POST /review HTTP/1.1" 200 -
+INFO:root:name
+INFO:root:rating
+INFO:root:No Comment Heading
+INFO:root:'NoneType' object has no attribute 'div'
+INFO:root:log my final result [{'Product': 'iPhone14', 'Name': 'Avi Nash', 'Rating': '5', 'CommentHead': 'Just wow!', 'Comment': 'Good'}, {'Product': 'iPhone14', 'Name': 'Tara singh mehra', 'Rating': '5', 'CommentHead': 'Great product', 'Comment': 'Nice camera but battery drain fast specially on video recording'}, {'Product': 'iPhone14', 'Name': 'Ajay Kumar', 'Rating': '5', 'CommentHead': 'Brilliant', 'Comment': 'Just amazing!'}, {'Product': 'iPhone14', 'Name': 'Narendar Redyy', 'Rating': '4', 'CommentHead': 'Very Good', 'Comment': 'Nice UI and Fast'}, {'Product': 'iPhone14', 'Name': 'Ashwini  biswal ', 'Rating': '4', 'CommentHead': 'Good quality product', 'Comment': 'Awesome 👍'}, {'Product': 'iPhone14', 'Name': 'Rahul Prasad ', 'Rating': '5', 'CommentHead': 'Fabulous!', 'Comment': 'Best smart phone under this price range compare to other phones in 2023 if you see overall build quality, performance and Camera with autofocus and video action mode are awesome50% extra RAM compared to iPhone 13 and other more features. Best time to upgrade to iPhone 14 . I am so happy See Low light photos are amazing..'}, {'Product': 'iPhone14', 'Name': 'SUNNY KUMAR', 'Rating': '5', 'CommentHead': 'Just wow!', 'Comment': 'I used iPhone 12 mini and now upgraded with iPhone 14. Camera quality is awesome.Full day battery backup.Super Retina display with high dynamic range is awesome.In terms of camera and battery life is big upgrade for me.'}, {'Product': 'iPhone14', 'Name': 'Shivam  kumar', 'Rating': '5', 'CommentHead': 'Terrific purchase', 'Comment': 'Thanku filipkart best phone in the world ❤️'}, {'Product': 'iPhone14', 'Name': 'Anup Singh', 'Rating': '5', 'CommentHead': 'Wonderful', 'Comment': 'Amazing product, love the design and the feel is awesome Performance is very smooth.'}, {'Product': 'iPhone14', 'Name': 'Vaish Khan', 'Rating': '5', 'CommentHead': 'Highly recommended', 'Comment': 'Ultimate'}, {'Product': 'iPhone14', 'Name': 'Vaish Khan', 'Rating': 'No Rating', 'CommentHead': 'No Comment Heading', 'Comment': 'Ultimate'}]
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:31:08] "POST /review HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:31:08] "[33mGET /style.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.18.0.2 - - [16/Aug/2023 18:31:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
