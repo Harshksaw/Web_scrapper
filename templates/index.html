@@ -1,20 +1,71 @@
-{% extends 'base.html' %}
-
-{% block head %}
+{% extends 'base.html' %} {% block head %}
 
 <title>Search Page</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-{% endblock %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/style.css') }}"
+/>
+<style>
+  /* Add CSS here */
 
-{% block body %}
-<div class="content">
+  .content {
+    width: 70%;
+    background-color: #e78989; /* Change the background color as desired */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .form {
+    text-align: center;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 2px solid black;
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2985e7; /* Change the button color as desired */
+    color: #fff;
+    border: 2px solid blue;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3; /* Change the button color on hover */
+  }
+</style>
+{% endblock %} {% block body %}
+<div class="main">
+  <div>
+    <h2><u>Enter product name to see Insights / reviews . Info</u></h2>
+  </div>
+  <div class="content">
     <h1 style="text-align: center">Search</h1>
 
     <div class="form">
-        <form action="/review" method="POST">
-            <input type="text" name="content" id="content">
-            <input type="submit" value="Search">
-        </form>
+      <form action="/review" method="POST">
+        <input
+          type="text"
+          name="content"
+          id="content"
+          placeholder="Enter product name"
+        />
+        <input type="submit" value="Search" />
+      </form>
     </div>
+  </div>
 </div>
 {% endblock %}
