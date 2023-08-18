@@ -1,12 +1,5 @@
 body {
-  /* background-color: #91ced4; */
   background-color: #91ced4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
 }
 body * {
   box-sizing: border-box;
